@@ -4,12 +4,59 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>MathAttack</title>
+        <title>Brian Ma'thematical Arithmerobics</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
         <link rel="stylesheet" href="main.css">
+        <script src="jquery-1.11.3.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#addition").click(function(){
+                    $.ajax({
+                        url: 'ajax_location.html',
+                        success: function(data) {
+                        //this is the redirect
+                        document.location.href='/newpage/';
+                        }
+                    });
+                });
+            });
+        </script>
+
     </head>
     <body>
-        <button type="button" onclick="alert('Hello World!')">Play Now</button>
-        <button type="button" onclick="window.location.href='/setup.html'">Set Up</button>
+        <form>
+            //gamemode selector
+            <input type="radio" name="gameMode" value="Quick Fire" checked>Quick Fire
+            <input type="radio" name="gameMode" value="3 Strikes">3 Strikes
+            </br>
+            //main options
+            <button type="button" onclick='alert('lol')'>Play Now</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Set Up</button>
+            </br> 
+            \\first row
+            <button id="addition" type="button">Addition</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Addition</button>
+            <button type="button" onclick="alert('lol)">Play Now</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Subtraction</button>
+            </br>
+            //second row
+            <button type="button" onclick="alert('lol)">Play Now</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Set Up</button>
+            <button type="button" onclick="alert('lol)">Play Now</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Set Up</button>
+            </br>
+            //third row
+            <button type="button" onclick="alert('lol)">Play Now</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Set Up</button>
+            <button type="button" onclick="alert('lol)">Play Now</button>
+            <button type="button" onclick="window.location.href='/setup.html'">Set Up</button>
+            </br>
+        </form>
+
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Hello World";
+            }
+        </script>   
     </body>
 </html>
